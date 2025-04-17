@@ -1,0 +1,120 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: radial-gradient(circle, #ffccff 0%, #ccffff 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: discoBG 10s infinite linear;
+  }
+  
+  @keyframes discoBG {
+    0% { background: radial-gradient(circle, #ffccff 0%, #ccffff 100%); }
+    25% { background: radial-gradient(circle, #ffcccc 0%, #ccccff 100%); }
+    50% { background: radial-gradient(circle, #ccffcc 0%, #ffcccc 100%); }
+    75% { background: radial-gradient(circle, #ffffcc 0%, #ccffff 100%); }
+    100% { background: radial-gradient(circle, #ffccff 0%, #ccffff 100%); }
+  }
+  
+  .quiz-container {
+    background: linear-gradient(135deg, #ff99cc, #cc99ff);
+    border: 5px dashed #660066;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 5px rgba(255, 0, 255, 0.4);
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .quiz-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+    animation: rotate 10s linear infinite;
+    z-index: 0;
+    opacity: 0.2;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+  
+  .quiz-container * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  #options button {
+    display: block;
+    margin: 15px auto;
+    padding: 12px 25px;
+    width: 85%;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+    background: linear-gradient(45deg, #ffff66, #ff66cc);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 5px 0 #cc0099;
+  }
+  
+  #options button:hover {
+    background: linear-gradient(45deg, #ffccff, #66ffff);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 0, 255, 0.5);
+  }
+  
+  #feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    color: #ffeb3b;
+    text-shadow: 1px 1px 2px #000;
+    animation: flashText 1s infinite alternate;
+  }
+  
+  @keyframes flashText {
+    0% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  #nextBtn {
+    margin-top: 30px;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #33cc33, #009900);
+    color: white;
+    font-weight: bold;
+    display: none;
+    box-shadow: 0 5px 0 #006600;
+    transition: all 0.3s ease;
+  }
+  
+  #nextBtn:hover {
+    background: linear-gradient(45deg, #66ff66, #33cc33);
+    transform: translateY(-2px);
+  }
+  
